@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+}
+
+nav {
+    border: 1px solid black;
+    /* border-radius: 10px; */
+    background: linear-gradient(90deg ,white, rgb(117, 68, 106));
+    padding: 10px;
+    overflow-y: auto;
+    width: 260px;
+}
+
+nav i {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    color: rgb(246, 246, 246);
+    font-weight: bold;
+    text-shadow: 1px 2px 10px rgb(192, 110, 224),
+                3px 4px 20px rgb(255, 255, 255);
+}
+
+nav ul {
+    background: linear-gradient(90deg, rgb(162, 182, 212),white);
+    margin: 15px 5px;
+    padding: 0 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    line-height: 2em;
+    box-shadow: 2px 1px 5px 1px rgb(66, 16, 16);
+}
+
+nav ul h2 {
+    color: rgb(92, 92, 93);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+nav ul h3 {
+    margin-top: 20px;
+    color: rgb(214, 188, 188);
+    background-color: rgb(102, 27, 87);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul h3:hover {
+    background-color: rgb(231, 38, 38);
+    color: white;  
+    text-shadow: 1px 1px 10px white;
+}
+
+nav ul li {
+    line-height: 1.6em;
+    color: rgb(59, 49, 49);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(145, 46, 87, 0.5);
+    cursor: pointer;
+    position: relative;
+    /* display: none; */
+}
+
+nav ul li::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    width: 0%; height: 0px;
+    background-color: rgba(228, 42, 42, 0.822);
+    box-shadow: 0 0 5px 1px rgba(129, 6, 109, 0.705);
+    transition: 0.2s;
+}
+
+nav ul li:hover{
+    font-weight: bold;
+}
+nav ul li:hover::before {
+    height: 2px;
+    width: 100%;
+}
+  
+
