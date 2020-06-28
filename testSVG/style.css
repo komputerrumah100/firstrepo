@@ -1,0 +1,39 @@
+
+
+
+svg .mouth {
+    transform: translate(10px) rotate(5deg) scale(0.5);
+        transform-origin: 300px 410px;
+        animation: mouthmove 2s infinite ;
+    }
+
+svg .inner-eye-group {
+    transform: translate(10px);
+    animation: moveeyes 5s infinite ;
+}
+
+@keyframes moveeyes {
+    0%{
+        transform: translate(10px);
+    }
+    50%{
+        transform: translate(-10px ,-20px);
+    }
+    100%{
+        transform: translate(10px);
+    }
+}
+@keyframes mouthmove {
+    0%{
+        transform: translate(5px);
+    }
+    50%{
+        transform: translate(-5px ,-20px) rotate(10deg);
+    }
+    70%{
+        transform: translate(-5px ,-20px) rotate(-10deg);
+    }
+    100%{
+        transform: translate(5px);
+    }
+}
