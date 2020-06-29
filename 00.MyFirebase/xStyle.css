@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+}
+
+.main-container{
+    background-color: rgb(85, 60, 195);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .main-form{
+    padding: 10px 5px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .main-form .title{
+    color: #fff;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.main-container .main-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.main-container .main-form form .message{
+    background-color: rgba(98, 251, 51, 0.767);
+    color: white;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.main-container .main-form form .form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-container .main-form form .form-group label{
+    color: rgb(204, 198, 241);
+}
+.main-container .main-form form .form-group input{
+    padding: 3px 0 ;
+    font-size: 16px;
+}
+
+.main-container .main-form form .form-group input[type=submit]{
+    margin-top: 20px;    
+    background-color: rgb(255, 113, 47);
+    color: white;
+    border: none;
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.main-container .main-form form .form-group input[type=submit]:hover{
+    background-color: rgb(255, 173, 134);
+}
+
+.main-container .main-table{
+    padding: 10px 5px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(235, 228, 235);
+    width: 100%;
+    text-align: left;
+}
+th,td{
+    padding: 5px;
+}
+th{
+    background-color: rgb(1, 87, 200);
+    color: white;
+    text-align: center;
+}
+
+
