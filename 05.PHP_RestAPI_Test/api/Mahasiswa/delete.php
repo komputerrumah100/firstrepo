@@ -2,7 +2,7 @@
     // Headers
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
-    header('Access-Control-Allow-Methods: POST');
+    header('Access-Control-Allow-Methods: DELETE');
     header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
     // Include Database Dan Table
@@ -14,22 +14,14 @@
     $mahasiswa  = $mahasiswa->connect();
     $mahasiswa  = new Mahasiswa($mahasiswa);
 
-    // Get raw data...
-    $data = json_decode(file_get_contents('php://input'));
+    // Preparing...
+    $data = json_decode(file_get_contents('PHP://input'));
+    
+    if( !empty($data->id) ){
 
-    if( !empty($data->nama) && 
-        !empty($data->nrp) &&
-        !empty($data->email) &&
-        !empty($data->jurusan) &&
-        !empty($data->gambar)
-    ){
-        $mahasiswa->nama = $data->nama;
-        $mahasiswa->nrp = $data->nrp;
-        $mahasiswa->email = $data->email;
-        $mahasiswa->jurusan = $data->jurusan;
-        $mahasiswa->gambar = $data->gambar;
-      
-        if($mahasiswa->create()){
+        $mahasiswa->id = $data->id;
+
+        if($mahasiswa->del($mahasiswa->id)){
             print_r(json_encode(array('msg'=>'Success')));
         }else{
             print_r(json_encode(array('Error'=>'Failed')));

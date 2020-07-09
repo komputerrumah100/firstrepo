@@ -12,29 +12,11 @@
     $mahasiswa  = $mahasiswa->connect();
     $mahasiswa  = new Mahasiswa($mahasiswa);
 
-    // Preparing...
-    // $mahasiswa->id  = '15';
-    $mahasiswa->id = isset($_GET['id']) ? $_GET['id'] : die;
-    $mahasiswa      = $mahasiswa->readSingle();
-    $num            = $mahasiswa->rowCount();
+    // Get raw data...
+    $data = json_decode(file_get_contents('php://input'));
 
-    // Sending data...
-    if($num > 0){
-        $mahasiswa = $mahasiswa->fetch(PDO::FETCH_ASSOC);
-        $emptyArray = array();
-
-            $filedArray = array(
-                'dbid'=>$mahasiswa['id'],
-                'dbnama'=>$mahasiswa['nama'],
-                'dbnrp'=>$mahasiswa['nrp'],
-                'dbemail'=>$mahasiswa['email'],
-                'dbjurusan'=>$mahasiswa['jurusan'],
-                'dbgambar'=>$mahasiswa['gambar']
-            );
-
-        array_push($emptyArray,$filedArray);
-        print_r(json_encode($emptyArray));
+    if( !empty($data->id) ){
+        
     }else{
-        print_r(json_encode(array('msg'=>'data not found')));
+        print_r(json_encode(array('Error'=>'Bad Request')));
     }
-    

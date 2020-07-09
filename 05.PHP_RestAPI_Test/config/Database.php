@@ -13,7 +13,7 @@ class Database{
             $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->uname, $this->pname);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }catch(PDOException $err){
-            echo 'Error : ' . $err->getMessage();
+            echo 'Error : ' . $err->getMessage();die;
         }
         return $this->conn;
     }
