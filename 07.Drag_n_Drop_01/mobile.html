@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{margin:auto;position: relative;top: 0;width: 90vw;height: 100vh;background-color: bisque;}
+        .bola{position:aboslute;width: 100px;height: 100px;background-color: rgb(78, 49, 204);border-radius: 50%;}
+    </style>
+    <title>Mobile</title>
+</head>
+<body>
+
+    
+    <div class="container">
+
+        <div class="bola"></div>
+
+    </div>
+
+    
+
+<script>
+    
+    const bola = document.querySelector('.bola');
+    bola.addEventListener('touchstart',touchStart,false);
+    bola.addEventListener('touchmove',touchMove,false);
+
+    function touchStart(e){
+        e.preventDefault();
+        console.log(e.touches[0].clientX);
+    }
+    
+    function touchMove(e){
+        e.preventDefault()
+        console.log(Math.round(e.touches[0].clientX));
+        console.log(Math.round(e.touches[0].clientY));
+    }
+</script>
+</body>
+</html>
