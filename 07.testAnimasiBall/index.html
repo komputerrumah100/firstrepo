@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{background-color:#fff;margin: auto; width: 80vw;min-height: 100vh;display: flex;justify-content: center;align-items: center;filter: contrast(16);}
+        .myball{position: absolute; width: 100px;height: 100px;border-radius: 50%;background-color: rgb(3, 0, 190);filter: blur(10px);}
+        .ball1{animation: animasi1 infinite 10s;}
+        .ball2{animation: animasi2 infinite 6s;}
+        .ball3{animation: animasi3 infinite 3s;}
+        .ball4{animation: animasi4 infinite 8s;}
+        .ball5{animation: animasi5 infinite 7s;}
+        @keyframes animasi1 {0%{transform: translate(0,0);}50%{transform: translate(30px,-100px) scale(0.8);}100%{transform: translate(0,0);}}
+        @keyframes animasi2 {0%{transform: translate(0,0);}50%{transform: translate(-20px,50px);}70%{transform: translate(0,-40px);}100%{transform: translate(0,0);}}
+        @keyframes animasi3 {0%{transform: translate(0,0);}50%{transform: translate(-30px,0);}70%{transform: translate(0,50px);}100%{transform: translate(0,0);}}
+        @keyframes animasi4 {0%{transform: translate(0,0);}50%{transform: translate(20px,20px);}70%{transform: translate(70px,0);}100%{transform: translate(0,0);}}
+        @keyframes animasi5 {0%{transform: translate(0,0);}50%{transform: translate(20px,20px) scale(0.5);}100%{transform: translate(0,0);}}
+    </style>
+    <title>MyAnimation</title>
+</head>
+<body>
+    
+
+
+    <div class="container">
+
+        <div draggable="true" class="myball ball1"></div>
+        <div draggable="true" class="myball ball2"></div>
+        <div draggable="true" class="myball ball3"></div>
+        <div draggable="true" class="myball ball4"></div>
+        <div draggable="true" class="myball ball5"></div>
+
+    </div>
+
+
+
+
+
+<script>
+    
+</script>
+</body>
+</html>
+
